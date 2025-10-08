@@ -7,16 +7,16 @@
 
 :root {
     /* Colors */
-    --primary-color: #ff914d;      /* Bright Orange */
-    --secondary-color: #ff4d6d;    /* Coral Red */
-    --accent-color: #ffd166;       /* Golden Yellow */
-    --bg-dark: #1b1b1b;            /* Warm Black */
-    --bg-darker: #0f0f0f;
-    --bg-light: #2c2c2c;
+    --primary-color: #a855f7;      /* Vivid Purple */
+    --secondary-color: #ec4899;    /* Pink Accent */
+    --accent-color: #8b5cf6;       /* Soft Violet */
+    --bg-dark: #1a0127;            /* Deep Purple Black */
+    --bg-darker: #10001a;
+    --bg-light: #2a0a3c;
     --text-primary: #ffffff;
-    --text-secondary: #e5e5e5;
-    --text-muted: #b3b3b3;
-    --border-color: #444444;
+    --text-secondary: #d1c4e9;
+    --text-muted: #9b8fb5;
+    --border-color: #3c1f4f;
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--accent-color));
@@ -1128,5 +1128,6 @@ section {
     100% { left: 100%; }
 
 }
+
 
 
