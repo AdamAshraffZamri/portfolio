@@ -7,16 +7,16 @@
 
 :root {
     /* Colors */
-    --primary-color: #3b82f6;      /* Bright Blue */
-    --secondary-color: #2563eb;    /* Deep Blue */
-    --accent-color: #22d3ee;       /* Cyan Accent */
-    --bg-dark: #0f172a;            /* Navy Black */
-    --bg-darker: #020617;
-    --bg-light: #1e293b;
-    --text-primary: #f8fafc;       /* Off White */
-    --text-secondary: #cbd5e1;
-    --text-muted: #64748b;
-    --border-color: #334155;
+    --primary-color: #ff914d;      /* Bright Orange */
+    --secondary-color: #ff4d6d;    /* Coral Red */
+    --accent-color: #ffd166;       /* Golden Yellow */
+    --bg-dark: #1b1b1b;            /* Warm Black */
+    --bg-darker: #0f0f0f;
+    --bg-light: #2c2c2c;
+    --text-primary: #ffffff;
+    --text-secondary: #e5e5e5;
+    --text-muted: #b3b3b3;
+    --border-color: #444444;
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--accent-color));
@@ -1128,4 +1128,5 @@ section {
     100% { left: 100%; }
 
 }
+
 
