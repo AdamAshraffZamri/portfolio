@@ -140,6 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Contact form functionality
     const contactForm = document.getElementById('contact-form');
     contactForm.addEventListener('submit', function(e) {
+        // Stop the default redirect
         e.preventDefault();
         
         const formData = new FormData(contactForm);
@@ -150,21 +151,36 @@ document.addEventListener('DOMContentLoaded', function() {
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         submitBtn.disabled = true;
         
-        // Simulate form submission (replace with actual form handling)
-        setTimeout(() => {
-            submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-            submitBtn.style.background = '#4ecdc4';
-            
-            // Reset form
-            contactForm.reset();
-            
-            // Reset button after 3 seconds
+        // Actually send the data to your Formspree URL
+        fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                // Success animation
+                submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                submitBtn.style.background = '#4ecdc4';
+                contactForm.reset();
+            } else {
+                // Error animation
+                submitBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Failed to send';
+                submitBtn.style.background = '#ff6b6b';
+            }
+        }).catch(error => {
+            // Network error animation
+            submitBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Network Error';
+            submitBtn.style.background = '#ff6b6b';
+        }).finally(() => {
+            // Reset button to normal after 3 seconds
             setTimeout(() => {
                 submitBtn.innerHTML = originalText;
                 submitBtn.style.background = '';
                 submitBtn.disabled = false;
             }, 3000);
-        }, 2000);
+        });
     });
 
     // Scroll to top functionality
