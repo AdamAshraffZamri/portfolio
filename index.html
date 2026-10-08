@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adam Ashraff - Computer Science & Software Engineering Student</title>
+    <title>Adam Ashraff - Computer Science & Data Engineering Student</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
@@ -18,9 +18,8 @@
             </div>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#tech-stack" class="nav-link">Tech Stack</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -34,8 +33,13 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <video class="hero-background-video" autoplay muted loop playsinline preload="metadata" poster="ADAM1.jpg" aria-hidden="true">
+            <source src="images/background/portfolio-background.mp4" type="video/mp4">
+        </video>
+        <div class="hero-video-overlay" aria-hidden="true"></div>
         <div class="hero-container">
             <div class="hero-content">
+                <span class="eyebrow">Data engineering student / UTM</span>
                 <h1 class="hero-title">
                     Hi, I'm <span class="text-gradient">Adam Ashraff</span>
                 </h1>
@@ -43,9 +47,21 @@
                     <span id="typed-text"></span><span class="cursor">|</span>
                 </h2>
                 <p class="hero-description">
-                    Computer Science & Software Engineering Student | Passionate about building scalable systems, 
-                    full-stack web development, and transforming raw data into actionable insights.
+                    I design and build practical web systems, from the first database table to the final interface. I am especially interested in tools that make everyday work clearer and more useful.
                 </p>
+                <div class="hero-biodata">
+                    <div><span>Based in</span><strong>Alor Gajah, Melaka</strong></div>
+                    <div><span>Currently</span><strong>Studying at UTM</strong></div>
+                    <div><span>Focus</span><strong>Web systems & data</strong></div>
+                </div>
+                <div class="hero-stack" id="tech-stack">
+                        <div class="stack-heading"><span>Working toolkit</span><small>Technologies I use in projects</small></div>
+                    <div class="stack-list">
+                        <span>Laravel</span><span>PHP</span><span>MySQL</span><span>JavaScript</span>
+                        <span>Tailwind CSS</span><span>React JS</span><span>Python</span><span>NumPy</span>
+                        <span>Pandas</span><span>C++</span><span>Java</span><span>Godot Engine</span>
+                    </div>
+                </div>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">
                         <i class="fas fa-envelope"></i> Contact Me
@@ -63,49 +79,10 @@
                 </div>
             </div>
             <div class="hero-image">
-                <div class="code-window">
-                    <div class="code-header">
-                        <div class="code-buttons">
-                            <span class="btn-close"></span>
-                            <span class="btn-minimize"></span>
-                            <span class="btn-maximize"></span>
-                        </div>
-                        <span class="code-title">portfolio.js</span>
-                    </div>
-                    <div class="code-content">
-                        <div class="code-line">
-                            <span class="line-number">1</span>
-                            <span class="code-text">
-                                <span class="keyword">const</span> 
-                                <span class="variable">developer</span> = {
-                            </span>
-                        </div>
-                        <div class="code-line">
-                            <span class="line-number">2</span>
-                            <span class="code-text">
-                                &nbsp;&nbsp;<span class="property">name</span>: 
-                                <span class="string">"Adam Ashraff"</span>,
-                            </span>
-                        </div>
-                        <div class="code-line">
-                            <span class="line-number">3</span>
-                            <span class="code-text">
-                                &nbsp;&nbsp;<span class="property">skills</span>: 
-                                <span class="string">["Laravel", "Python", "C++", "Java"]</span>,
-                            </span>
-                        </div>
-                        <div class="code-line">
-                            <span class="line-number">4</span>
-                            <span class="code-text">
-                                &nbsp;&nbsp;<span class="property">passion</span>: 
-                                <span class="string">"Sleeping all days"</span>
-                            </span>
-                        </div>
-                        <div class="code-line">
-                            <span class="line-number">5</span>
-                            <span class="code-text">};</span>
-                        </div>
-                    </div>
+                <div class="profile-frame">
+                    <div class="profile-ring"></div>
+                    <img src="ADAM2.jpeg" alt="Portrait of Adam Ashraff">
+                    <div class="profile-caption"><span class="status-dot"></span><span>Open to learning and collaboration</span></div>
                 </div>
             </div>
         </div>
@@ -114,199 +91,36 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Navigation Cards -->
+    <section class="destination-section" aria-labelledby="destination-title">
         <div class="container">
-            <div class="section-header">
-                <span class="section-badge">About Me</span>
-                <h2 class="section-title">Who I Am?</h2>
-                <p class="section-description">
-                    A passionate student with strong foundations in computer science, software engineering, and a keen interest in data analytics.
-                </p>
-                <img src="ADAM1.jpg" alt="Adam Ashraff">
+                <div class="section-header">
+                <span class="section-badge">Selected areas</span>
+                <h2 class="section-title" id="destination-title">What I have been working on</h2>
+                <p class="section-description">A short index of projects, qualifications, and milestones.</p>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>My Biodata</h3>
-                    <p>
-                        I have been involved in computer science courses for 2 years, driven by my passion
-                        for understanding systems and working with data to create meaningful solutions. What started 
-                        as an interest in coding has now evolved into my successful academic path as a Software Engineering
-                        student. I am enthusiastic about improving my technical skills, spanning from Operating Systems theory 
-                        to MVC architecture and predictive modeling.
-                        While I'm continuing my academic journey, I'm passionate about learning
-                        to build efficient systems and create solutions that are both functional and impactful.
-                    </p>
-                    <div class="highlights">
-                        <div class="highlight-item">
-                            <i class="fas fa-code"></i>
-                            <div>
-                                <h4>High Quality Code</h4>
-                                <p>Debugging and writing maintainable code across full-stack applications</p>
-                            </div>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-lightbulb"></i>
-                            <div>
-                                <h4>Problem Solving</h4>
-                                <p>Breaking down complex algorithms with critical thinking skills</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <h3>2+</h3>
-                        <p>Years Experience</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>10+</h3>
-                        <p>Courses Completed</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>20+</h3>
-                        <p>Skills</p>
-                    </div>
-                </div>
+            <div class="destination-grid">
+                <a class="destination-card destination-projects" href="projects.html">
+                    <span class="destination-icon"><i class="fas fa-code"></i></span>
+                    <span class="destination-copy"><small>01 / Build</small><strong>Projects</strong><span>Selected systems, experiments, and digital products.</span></span>
+                    <i class="fas fa-arrow-up-right-from-square destination-arrow"></i>
+                </a>
+                <a class="destination-card destination-certificates" href="certificates.html">
+                    <span class="destination-icon"><i class="fas fa-certificate"></i></span>
+                    <span class="destination-copy"><small>02 / Learn</small><strong>Certificates</strong><span>Courses and credentials collected along the way.</span></span>
+                    <i class="fas fa-arrow-up-right-from-square destination-arrow"></i>
+                </a>
+                <a class="destination-card destination-awards" href="awards.html">
+                    <span class="destination-icon"><i class="fas fa-award"></i></span>
+                    <span class="destination-copy"><small>03 / Grow</small><strong>Awards</strong><span>Milestones and moments worth remembering.</span></span>
+                    <i class="fas fa-arrow-up-right-from-square destination-arrow"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Technical Skills</span>
-                <h2 class="section-title">My Expertise</h2>
-                <p class="section-description">
-                    Technologies and tools I use to create amazing digital experiences
-                </p>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <span>HTML/CSS/JS</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 70%"></div>
-                            </div>
-                            <span class="skill-percent">70%</span>
-                        </div>
-                        <div class="skill-item">
-                            <span>Figma</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 60%"></div>
-                            </div>
-                            <span class="skill-percent">60%</span>
-                        </div>
-                        <div class="skill-item">
-                            <span>React</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 50%"></div>
-                            </div>
-                            <span class="skill-percent">50%</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3><i class="fas fa-server"></i> Backend & OOP</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <span>C++ / Java</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 70%"></div>
-                            </div>
-                            <span class="skill-percent">70%</span>
-                        </div>
-                        <div class="skill-item">
-                            <span>PHP & Laravel (MVC)</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 65%"></div>
-                            </div>
-                            <span class="skill-percent">65%</span>
-                        </div>
-                        <div class="skill-item">
-                            <span>Database Management</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 60%"></div>
-                            </div>
-                            <span class="skill-percent">60%</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fas fa-chart-bar"></i> Data Science & ML</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <span>Python</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 70%"></div>
-                            </div>
-                            <span class="skill-percent">70%</span>
-                        </div>
-                        <div class="skill-item">
-                            <span>NumPy & Pandas</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 65%"></div>
-                            </div>
-                            <span class="skill-percent">65%</span>
-                        </div>
-                        <div class="skill-item">
-                            <span>Machine Learning (KNN/NB)</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 50%"></div>
-                            </div>
-                            <span class="skill-percent">50%</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Tools</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <span>Git/GitHub</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
-                            <span class="skill-percent">95%</span>
-                        </div>
-                        <div class="skill-item">
-                            <span>Canva</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                            <span class="skill-percent">90%</span>
-                        </div>
-                        <div class="skill-item">
-                            <span>Excel</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 60%"></div>
-                            </div>
-                            <span class="skill-percent">60%</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Portfolio</span>
-                <h2 class="section-title">Projects & Contributions</h2>
-                <p class="section-description">
-                    A showcase of my recent projects and contributions
-                </p>
-            </div>
-            <div class="projects-grid">
-                
-                <!-- Project: Client Account System -->
+    <!-- Legacy project cards moved to projects.html -->
+    <!--
                 <div class="project-card">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=250&fit=crop" alt="Code Terminal">
@@ -325,7 +139,7 @@
                     </div>
                 </div>
 
-                <!-- Project: AI Impact Analysis -->
+                
                 <div class="project-card">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop" alt="Data Analytics">
@@ -345,7 +159,7 @@
                     </div>
                 </div>
 
-                <!-- Project: Energy Genome Map -->
+                
                 <div class="project-card">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop" alt="Circuit Board">
@@ -364,7 +178,7 @@
                     </div>
                 </div>
 
-                <!-- Project: Vehicle Booking Module -->
+                
                 <div class="project-card">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=400&h=250&fit=crop" alt="Vehicle">
@@ -383,7 +197,7 @@
                     </div>
                 </div>
 
-                <!-- Original Project: Leaping Kitten -->
+                
                 <div class="project-card">
                     <div class="project-image">
                         <img src="https://www.warrenphotographic.co.uk/photography/bigs/25291-Ginger-kitten-leaping-with-arms-outstretched-white-background.jpg" 
@@ -403,7 +217,7 @@
                     </div>
                 </div>
 
-                <!-- Original Project: Hasta Car Rental -->
+                
                 <div class="project-card">
                     <div class="project-image">
                         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqmGx-S4Fqw8RdrUCkQcXzGlcich_aHnn27DRb6Bm2BTpwQkwt-VkRaKQTyxvmQUvHAuLHKhfWHs36IHc_DG061Q87obcdGENegibQORWtLxb6Ef7zsSP99amKMCMCVSmQCB60qKEAe3g/s400/hasta.jpeg" 
@@ -423,7 +237,7 @@
                     </div>
                 </div>
 
-                <!-- Original Project: CliMate -->
+                
                 <div class="project-card">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=250&fit=crop" alt="Real Estate">
@@ -443,7 +257,7 @@
 
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Experience Section -->
     <section id="experience" class="experience">
@@ -508,21 +322,6 @@
         </div>
       </div>
 
-      <!-- Primary School -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>Sekolah Rendah Arab Jaim Jelatang</h3>
-          <h4>Primary School</h4>
-          <span class="timeline-date">2012 - 2017</span>
-          <ul>
-            <li>UPSR (2A 4B)</li>
-            <li>SIA (5A 1B)</li>
-            <li>UPKK (8A)</li>
-            <li>UAT6 (4A)</li>
-          </ul>
-        </div>
-      </div>
     </div>
   </div>
 </section>

@@ -52,8 +52,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling for navigation links
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
             const targetId = this.getAttribute('href');
+            if (!targetId.startsWith('#')) return;
+            e.preventDefault();
             const targetSection = document.querySelector(targetId);
             
             if (targetSection) {
@@ -73,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let charIndex = 0;
 
     function typeWriter() {
+        if (!typedTextElement) return;
         if (charIndex < textArray[textArrayIndex].length) {
             typedTextElement.textContent += textArray[textArrayIndex].charAt(charIndex);
             charIndex++;
@@ -95,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Start typing animation
-    setTimeout(typeWriter, 1000);
+    if (typedTextElement) setTimeout(typeWriter, 1000);
 
     // Scroll animations
     const observerOptions = {
@@ -139,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Contact form functionality
     const contactForm = document.getElementById('contact-form');
-    contactForm.addEventListener('submit', function(e) {
+    if (contactForm) contactForm.addEventListener('submit', function(e) {
         // Stop the default redirect
         e.preventDefault();
         
